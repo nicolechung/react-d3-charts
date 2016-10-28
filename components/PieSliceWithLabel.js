@@ -3,16 +3,23 @@ import * as d3 from 'd3'
 import { Element } from 'react-faux-dom'
 import css from './styles.css'
 
-const PieSliceWithLabel = ({data, color}) => {
-    const path = new Element('path')
+class PieSliceWithLabel extends React.Component {
+    handleClick () {
+        console.log('click!')
+    }
 
-    let arc = d3.arc()
-    .innerRadius(data.data.innerRadius)
-    .outerRadius(data.data.outerRadius)
-    path.setAttribute('d', arc(data))
-    path.setAttribute('style', { 'fill': color})
-
-    return path.toReact()
+    render() {
+        const data = this.props.data
+        const color = this.props.color
+        const path = new Element('path')
+        let arc = d3.arc()
+        .innerRadius(data.data.innerRadius)
+        .outerRadius(data.data.outerRadius)
+        path.setAttribute('d', arc(data))
+        path.setAttribute('style', { 'fill': color, 'cursor' : 'pointer' })
+        path.addEventListener('click', this.handleClick)
+        return path.toReact()
+    }
 }
 
 PieSliceWithLabel.propTypes = {

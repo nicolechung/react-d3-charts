@@ -19,7 +19,7 @@ class App extends React.Component {
                         {'magnitude': 92, label: 'Code lines', outerRadius: 100, innerRadius: 50},
                         {'magnitude': 40, label: 'Empty lines', outerRadius: 70, innerRadius: 50},
                         {'magnitude': 22, label: 'More lines', outerRadius: 50, innerRadius: 50},
-                        {'magnitude': 22, label: 'Cool text lines', outerRadius: 30, innerRadius: 50},
+                        {'magnitude': 22, label: 'Cool text lines', outerRadius: 70, innerRadius: 50},
                         {'magnitude': 22, label: 'Almost more lines', outerRadius: 50, innerRadius: 50}
                     ]}
                      />

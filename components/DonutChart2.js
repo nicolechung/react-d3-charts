@@ -19,7 +19,6 @@ const DonutChart2 = ({data, slices}) => {
 
     let donutChart = pie(slices)
     donutChart.map((d, i) => { 
-        console.log({d: d})
         g.appendChild(<PieSliceWithLabel key={`arc-${i}`}
                         arcValue={i}
                         data={d}
