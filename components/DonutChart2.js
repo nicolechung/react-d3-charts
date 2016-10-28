@@ -18,13 +18,12 @@ const DonutChart2 = ({data, slices}) => {
     let colors = d3.schemeCategory20c // temporary
 
     let donutChart = pie(slices)
-
     donutChart.map((d, i) => { 
         console.log({d: d})
         g.appendChild(<PieSliceWithLabel key={`arc-${i}`}
                         arcValue={i}
                         data={d}
-                        color={data.color} />)
+                        color={colors[i]} />)
     })
 
     g.setAttribute('transform', `translate(${data.x}, ${data.y})`)

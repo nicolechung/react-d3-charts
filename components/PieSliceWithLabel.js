@@ -7,9 +7,8 @@ const PieSliceWithLabel = ({data, color}) => {
     const path = new Element('path')
 
     let arc = d3.arc()
-    .innerRadius(data.innerRadius)
-    .outerRadius(data.outerRadius)
-
+    .innerRadius(data.data.innerRadius)
+    .outerRadius(data.data.outerRadius)
     path.setAttribute('d', arc(data))
     path.setAttribute('style', { 'fill': color})
 
