@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    top: 20px;
+    border: 2px solid red;
+}
+path {
+    cursor: mouse;
+}
+.svgContainer {
+    border: 2px solid green;
+    display: block;
+	width: 100%;
+    min-height: 500px;
+}
